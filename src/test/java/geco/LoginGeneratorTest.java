@@ -54,4 +54,12 @@ public class LoginGeneratorTest {
         assertEquals("John Ralling ajoute",0,a);
     }*/
 
+    @Test
+    public void generateLoginNomcourt() throws Exception{
+        String nom = "Du";
+        String prenom = "Paul";
+        String res=loggen.generateLoginForNomAndPrenom(nom,prenom);
+        int a = res.compareTo("PDU");
+        assertEquals("Paul Du",0,a);
+    }
 }
